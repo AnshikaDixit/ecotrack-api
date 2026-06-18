@@ -20,7 +20,7 @@ def on_startup():
 allowed_origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,
+    allow_origins=["https://virtualwar-ecotrack-app.web.app", "http://localhost:8000", "http://127.0.0.1:8001"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
